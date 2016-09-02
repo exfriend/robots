@@ -1,0 +1,11 @@
+<?php
+
+namespace {{namespace}};
+
+use DiDom\Document as Doc;
+use phpQuery;
+
+class {{class}} extends Exfriend\Robots\Parser
+{
+
+}

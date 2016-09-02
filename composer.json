@@ -1,0 +1,24 @@
+{
+  "name": "exfriend/robots",
+  "description": "Scraping framework for Laravel",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Exfriend\\Robots\\": "src/Robots/"
+    }
+  },
+  "require": {
+    "exfriend/overseer-bootstrap": "^0.1.0",
+    "exfriend/cloudfactory": "2.*",
+    "exfriend/rotator": "^0.1",
+    "imangazaliev/didom": "*",
+    "pherum/phpquery": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladislav Otchenashev",
+      "email": "i@zlad.tk"
+    }
+  ]
+}

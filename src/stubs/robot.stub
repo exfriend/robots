@@ -1,0 +1,27 @@
+<?php
+
+namespace {{namespace}};
+
+class Robot extends Exfriend\Robots\Robot
+{
+  public $parser;
+  public $base_url = '{{url}}';
+
+  /**
+   * Initial configuration
+   */
+  public function configure()
+  {
+    $this->parser = new Parser();
+    $this->engine->setThreads(25);
+  }
+
+  /**
+   * Scraping scenario
+   */
+  public function handle()
+  {
+    $this->say('Robot started');
+
+  }
+}

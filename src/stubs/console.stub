@@ -1,0 +1,35 @@
+<?php
+
+namespace {{namespace}};
+
+class {{class}} extends \Exfriend\Robots\Console\Command
+{
+
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = '{{signature}}';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = '{{description}}';
+    protected $title = '{{title}}';
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        $this->checkpoint();
+        $this->setProgress(0);
+
+    }
+
+}

@@ -1,0 +1,41 @@
+<?php
+
+namespace {{namespace}};
+
+class {{class}} extends Exfriend\Robots\Request
+{
+
+  public $url = '{{url}}';
+
+  /**
+   * Initial configuration
+   */
+  public function configure()
+  {
+    $this->withUserAgent();
+  }
+
+  /**
+   *  Validate the request result
+   */
+  public function validate()
+  {
+      return strlen($this->response)>0;
+  }
+  /**
+   *  Request delivered successfully
+   */
+  public function success()
+  {
+
+  }
+
+  /**
+   *  Request failed
+   */
+  public function fail()
+  {
+
+  }
+
+}

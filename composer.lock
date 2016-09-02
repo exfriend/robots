@@ -1,0 +1,210 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "bd26065128cd777b228a8995e1ae29bb",
+    "content-hash": "04ba8b2179c34d17359a35a7104122f5",
+    "packages": [
+        {
+            "name": "exfriend/artisan-mutex",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/exfriend/artisan-mutex.git",
+                "reference": "ec2a979a268108a7c99eb76e9ff650c89598030c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/exfriend/artisan-mutex/zipball/ec2a979a268108a7c99eb76e9ff650c89598030c",
+                "reference": "ec2a979a268108a7c99eb76e9ff650c89598030c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Exfriend\\ArtisanMutex\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vladislav Otchenashev",
+                    "email": "i@zlad.tk"
+                }
+            ],
+            "description": "Prevent ANY overlapping for Laravel Artisan commands.",
+            "time": "2016-08-25 22:06:45"
+        },
+        {
+            "name": "exfriend/cloudfactory",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/exfriend/cloudfactory.git",
+                "reference": "6d842ad6e238fef916737d75c50f5ee7b73573cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/exfriend/cloudfactory/zipball/6d842ad6e238fef916737d75c50f5ee7b73573cf",
+                "reference": "6d842ad6e238fef916737d75c50f5ee7b73573cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/stopwatch": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Exfriend\\CloudFactory\\": "src/Exfriend/CloudFactory/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "exfriend",
+                    "email": "i@zlad.tk"
+                }
+            ],
+            "description": "A powerful crawling library",
+            "time": "2016-08-21 13:16:50"
+        },
+        {
+            "name": "exfriend/laravel-overseer",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/exfriend/laravel-overseer.git",
+                "reference": "fa077a64b3070faf8823976d82bb24f86f05a968"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/exfriend/laravel-overseer/zipball/fa077a64b3070faf8823976d82bb24f86f05a968",
+                "reference": "fa077a64b3070faf8823976d82bb24f86f05a968",
+                "shasum": ""
+            },
+            "require": {
+                "exfriend/artisan-mutex": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Exfriend\\Overseer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vladislav Otchenashev",
+                    "email": "i@zlad.tk"
+                }
+            ],
+            "description": "Laravel Task Manager",
+            "time": "2016-08-25 22:07:40"
+        },
+        {
+            "name": "exfriend/overseer-bootstrap",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/exfriend/overseer-bootstrap.git",
+                "reference": "162fb0935d1a94417c152c74a570ca16d4d23dd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/exfriend/overseer-bootstrap/zipball/162fb0935d1a94417c152c74a570ca16d4d23dd3",
+                "reference": "162fb0935d1a94417c152c74a570ca16d4d23dd3",
+                "shasum": ""
+            },
+            "require": {
+                "exfriend/laravel-overseer": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Exfriend\\OverseerBootstrap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vladislav Otchenashev",
+                    "email": "i@zlad.tk"
+                }
+            ],
+            "description": "Bootstrap UI for Laravel Overseer",
+            "time": "2016-08-25 22:13:22"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "v2.8.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "35bae476693150728b0eb51647faac82faf9aaca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/35bae476693150728b0eb51647faac82faf9aaca",
+                "reference": "35bae476693150728b0eb51647faac82faf9aaca",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-06-29 05:29:29"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

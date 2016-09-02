@@ -1,0 +1,15 @@
+<?php
+
+namespace {{namespace}};
+
+class {{class}} extends Exfriend\Robots\ExtractedItem
+{
+  protected $rules = [
+
+  ];
+
+  public function __toString(){
+      return (string) $this->data;
+  }
+
+}
