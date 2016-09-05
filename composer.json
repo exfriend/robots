@@ -8,7 +8,7 @@
   },
   "type": "library",
   "require": {
-    "exfriend/overseer-bootstrap": "dev-master",
+    "exfriend/overseer-bootstrap": "*",
     "exfriend/cloudfactory": "2.*",
     "exfriend/rotator": "^0.1",
     "imangazaliev/didom": "*",
