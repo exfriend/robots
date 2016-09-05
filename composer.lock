@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ebba2f51a11fbbc32a5216b392bf3c7f",
-    "content-hash": "25b441734ae6ef001d3cd16ce5ed34a9",
+    "hash": "66c2c21a4ea3009ebd9a15bcfcdca5c8",
+    "content-hash": "a3744db6010f0d0f0d75998e93070a5b",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -187,16 +187,16 @@
         },
         {
             "name": "exfriend/overseer-bootstrap",
-            "version": "0.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/exfriend/overseer-bootstrap.git",
-                "reference": "162fb0935d1a94417c152c74a570ca16d4d23dd3"
+                "reference": "dfe68e152fb671114bbe23e8fd398b366f26113a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/exfriend/overseer-bootstrap/zipball/162fb0935d1a94417c152c74a570ca16d4d23dd3",
-                "reference": "162fb0935d1a94417c152c74a570ca16d4d23dd3",
+                "url": "https://api.github.com/repos/exfriend/overseer-bootstrap/zipball/dfe68e152fb671114bbe23e8fd398b366f26113a",
+                "reference": "dfe68e152fb671114bbe23e8fd398b366f26113a",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 }
             ],
             "description": "Bootstrap UI for Laravel Overseer",
-            "time": "2016-08-25 22:13:22"
+            "time": "2016-08-30 22:23:51"
         },
         {
             "name": "exfriend/rotator",
@@ -716,7 +716,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "exfriend/overseer-bootstrap": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

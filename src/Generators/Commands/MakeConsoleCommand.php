@@ -153,11 +153,19 @@ class MakeConsoleCommand extends Command
     protected function getArguments()
     {
         return [
-            [ 'name', InputArgument::REQUIRED, 'The name of the robot' ],
+            [ 'name', InputArgument::REQUIRED, 'The name of the command' ],
+        ];
+    }
+
+    protected function getOptions()
+    {
+        return [
+            [ 'robot', InputArgument::REQUIRED, 'The name of the robot' ],
             [ 'signature', InputArgument::REQUIRED, 'e.g. scrape:ebay' ],
             [ 'title', InputArgument::REQUIRED, 'e.g. eBay Scraper' ],
             [ 'description', InputArgument::REQUIRED, 'Nice description for UI' ],
         ];
+
     }
 
 }

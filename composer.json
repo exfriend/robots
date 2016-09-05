@@ -4,11 +4,11 @@
   "type": "library",
   "autoload": {
     "psr-4": {
-      "Exfriend\\Robots\\": "src/Robots/"
+      "Exfriend\\Robots\\": "src/"
     }
   },
   "require": {
-    "exfriend/overseer-bootstrap": "^0.1.0",
+    "exfriend/overseer-bootstrap": "dev-master",
     "exfriend/cloudfactory": "2.*",
     "exfriend/rotator": "^0.1",
     "imangazaliev/didom": "*",

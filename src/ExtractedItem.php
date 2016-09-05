@@ -7,7 +7,7 @@ class ExtractedItem
     public $data = [];
     protected $rules = [];
 
-    public function __construct($data = null)
+    public function __construct( $data = null )
     {
         $this->data = $data;
     }
@@ -19,7 +19,7 @@ class ExtractedItem
 
     public function validation()
     {
-        return \Validator::make($this->data, $this->rules);
+        return \Validator::make( $this->data, $this->rules );
     }
 
     public function errors()
@@ -31,9 +31,9 @@ class ExtractedItem
      * Export
      */
 
-    public function toEloquent($modelName)
+    public function toEloquent( $modelName )
     {
-        return new $modelName($this->toArray());
+        return new $modelName( $this->toArray() );
     }
 
     public function toCsv()
@@ -45,7 +45,7 @@ class ExtractedItem
      * Getters
      */
 
-    public function __get($field)
+    public function __get( $field )
     {
         return $this->data[ $field ];
     }
@@ -57,7 +57,7 @@ class ExtractedItem
 
     public function __toString()
     {
-        return json_encode($this->toArray());
+        return json_encode( $this->toArray() );
     }
 
 
