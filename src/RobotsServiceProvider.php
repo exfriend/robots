@@ -24,30 +24,30 @@ class RobotsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton( 'command.robots.make.request', function ( $app )
-        {
-            return $app[ 'Exfriend\Robots\Commands\MakeRequestCommand' ];
-        } );
+        //        $this->app->singleton( 'command.robots.make.request', function ( $app )
+        //        {
+        //            return $app[ 'Exfriend\Robots\Commands\MakeRequestCommand' ];
+        //        } );
         $this->app->singleton( 'command.robots.make.robot', function ( $app )
         {
-            return $app[ 'Exfriend\Robots\Commands\MakeRobotCommand' ];
+            return $app[ \Exfriend\Robots\Generators\Robot\Command::class ];
         } );
-        $this->app->singleton( 'command.robots.make.console', function ( $app )
-        {
-            return $app[ 'Exfriend\Robots\Commands\MakeConsoleCommand' ];
-        } );
-        $this->app->singleton( 'command.robots.make.dto', function ( $app )
-        {
-            return $app[ 'Exfriend\Robots\Commands\MakeDtoCommand' ];
-        } );
-        $this->app->singleton( 'command.robots.make.parser', function ( $app )
-        {
-            return $app[ 'Exfriend\Robots\Commands\MakeParserCommand' ];
-        } );
-        $this->app->singleton( 'command.robots.make.scraper', function ( $app )
-        {
-            return $app[ 'Exfriend\Robots\Commands\MakeScraperCommand' ];
-        } );
+        //        $this->app->singleton( 'command.robots.make.console', function ( $app )
+        //        {
+        //            return $app[ 'Exfriend\Robots\Commands\MakeConsoleCommand' ];
+        //        } );
+        //        $this->app->singleton( 'command.robots.make.dto', function ( $app )
+        //        {
+        //            return $app[ 'Exfriend\Robots\Commands\MakeDtoCommand' ];
+        //        } );
+        //        $this->app->singleton( 'command.robots.make.parser', function ( $app )
+        //        {
+        //            return $app[ 'Exfriend\Robots\Commands\MakeParserCommand' ];
+        //        } );
+        //        $this->app->singleton( 'command.robots.make.scraper', function ( $app )
+        //        {
+        //            return $app[ 'Exfriend\Robots\Commands\MakeScraperCommand' ];
+        //        } );
 
 
         $this->app->singleton( 'robots.default', function ()
@@ -71,11 +71,11 @@ class RobotsServiceProvider extends ServiceProvider
 
         require( __DIR__ . '/helpers.php' );
 
-        $this->commands( 'command.robots.make.request' );
+        //        $this->commands( 'command.robots.make.request' );
         $this->commands( 'command.robots.make.robot' );
-        $this->commands( 'command.robots.make.console' );
-        $this->commands( 'command.robots.make.dto' );
-        $this->commands( 'command.robots.make.parser' );
-        $this->commands( 'command.robots.make.scraper' );
+        //        $this->commands( 'command.robots.make.console' );
+        //        $this->commands( 'command.robots.make.dto' );
+        //        $this->commands( 'command.robots.make.parser' );
+        //        $this->commands( 'command.robots.make.scraper' );
     }
 }

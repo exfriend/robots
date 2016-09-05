@@ -2,7 +2,7 @@
 
 namespace {{namespace}};
 
-class {{class}} extends Exfriend\Robots\Request
+class {{class}} extends \Exfriend\Robots\Request
 {
 
   public $url = '{{url}}';

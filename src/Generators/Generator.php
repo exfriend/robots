@@ -3,6 +3,8 @@
 
 namespace Exfriend\Robots\Generators;
 
+use Illuminate\Filesystem\Filesystem;
+
 
 abstract class Generator
 {

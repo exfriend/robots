@@ -2,7 +2,7 @@
 
 namespace {{namespace}};
 
-class {{class}} extends Exfriend\Robots\ExtractedItem
+class {{class}} extends \Exfriend\Robots\ExtractedItem
 {
   protected $rules = [
 

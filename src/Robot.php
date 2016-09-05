@@ -4,10 +4,8 @@ namespace Exfriend\Robots;
 
 use Illuminate\Console\Command;
 
-class Robot
+abstract class Robot
 {
-
-    public $url;
     public $cookie_file;
     public $base_url;
 
@@ -22,18 +20,9 @@ class Robot
         $this->configure();
     }
 
-    public function configure()
-    {
-    }
+    abstract public function configure();
 
-    public function handle()
-    {
-    }
-
-    public function get( $url )
-    {
-        return $this->engine->run( new Request( $url ) );
-    }
+    abstract public function handle();
 
     public function say( $text )
     {

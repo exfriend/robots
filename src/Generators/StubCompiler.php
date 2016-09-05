@@ -27,7 +27,7 @@ class StubCompiler
 
     protected function normalizeStub( $stub )
     {
-        if ( !!strpos( $stub, '.stub' ) && file_exists( $this->stubPath . $stub . '.stub' ) )
+        if ( file_exists( $this->stubPath . $stub . '.stub' ) )
         {
             return file_get_contents( $this->stubPath . $stub . '.stub' );
         }

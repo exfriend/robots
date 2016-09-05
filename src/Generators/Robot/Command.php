@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputOption;
 
 class Command extends LaravelCommand
 {
-    protected $name = 'make:robots:robot';
+    protected $name = 'robots:robot';
     protected $namespace = 'App\\Robots';
 
     protected $description = 'Create a new robot';
@@ -20,6 +20,7 @@ class Command extends LaravelCommand
     public function __construct( Generator $generator )
     {
         $this->generator = $generator;
+        parent::__construct();
     }
 
     public function fire()
@@ -27,7 +28,7 @@ class Command extends LaravelCommand
         $name = strtolower( $this->argument( 'name' ) );
         if ( !$url = !empty( $this->option( 'url' ) ) ? $this->option( 'url' ) : false )
         {
-            $url = $this->ask( 'Enter URL:', 'http' );
+            $url = $this->ask( 'Enter URL:', 'http://' );
         }
 
         $this->generator->generate( $name, [

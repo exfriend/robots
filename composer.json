@@ -1,12 +1,12 @@
 {
   "name": "exfriend/robots",
   "description": "Scraping framework for Laravel",
-  "type": "library",
   "autoload": {
     "psr-4": {
       "Exfriend\\Robots\\": "src/"
     }
   },
+  "type": "library",
   "require": {
     "exfriend/overseer-bootstrap": "dev-master",
     "exfriend/cloudfactory": "2.*",

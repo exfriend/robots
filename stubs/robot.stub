@@ -2,9 +2,8 @@
 
 namespace {{namespace}};
 
-class Robot extends Exfriend\Robots\Robot
+class Robot extends \Exfriend\Robots\Robot
 {
-  public $parser;
   public $base_url = '{{url}}';
 
   /**
@@ -12,8 +11,6 @@ class Robot extends Exfriend\Robots\Robot
    */
   public function configure()
   {
-    $this->parser = new Parser();
-    $this->engine->setThreads(25);
   }
 
   /**
