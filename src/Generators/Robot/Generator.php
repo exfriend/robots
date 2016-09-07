@@ -12,7 +12,7 @@ class Generator extends BaseGenerator
 
     public function getNamespace()
     {
-        return 'App\\Robots\\' . ucfirst( $this->name ) . '\\Robot';
+        return 'App\\Robots\\' . ucfirst( $this->name );
     }
 
     public function getOutputFilePath()

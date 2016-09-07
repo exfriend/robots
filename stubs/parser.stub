@@ -4,6 +4,7 @@ namespace {{namespace}};
 
 use DiDom\Document as Doc;
 use phpQuery;
+use Exfriend\Robots\Regex;
 
 class {{class}} extends \Exfriend\Robots\Parser
 {

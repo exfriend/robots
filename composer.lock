@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "66c2c21a4ea3009ebd9a15bcfcdca5c8",
-    "content-hash": "a3744db6010f0d0f0d75998e93070a5b",
+    "hash": "611d2650c2e818fc8cdbdf5d49a134be",
+    "content-hash": "c53205f8d1a52437375f4b71b0371452",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -109,16 +109,16 @@
         },
         {
             "name": "exfriend/cloudfactory",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/exfriend/cloudfactory.git",
-                "reference": "a9c7d51319f0b286bf3baf2b7d0ece3511507015"
+                "reference": "d4fa17578b7e242eed734914238c0950a330c854"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/exfriend/cloudfactory/zipball/a9c7d51319f0b286bf3baf2b7d0ece3511507015",
-                "reference": "a9c7d51319f0b286bf3baf2b7d0ece3511507015",
+                "url": "https://api.github.com/repos/exfriend/cloudfactory/zipball/d4fa17578b7e242eed734914238c0950a330c854",
+                "reference": "d4fa17578b7e242eed734914238c0950a330c854",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
                 }
             ],
             "description": "A powerful crawling library",
-            "time": "2016-09-02 01:59:20"
+            "time": "2016-09-05 16:11:34"
         },
         {
             "name": "exfriend/laravel-overseer",
@@ -187,16 +187,16 @@
         },
         {
             "name": "exfriend/overseer-bootstrap",
-            "version": "dev-master",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/exfriend/overseer-bootstrap.git",
-                "reference": "dfe68e152fb671114bbe23e8fd398b366f26113a"
+                "reference": "18ad4fbeb2b1484a8292520713f9f964ce3a6420"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/exfriend/overseer-bootstrap/zipball/dfe68e152fb671114bbe23e8fd398b366f26113a",
-                "reference": "dfe68e152fb671114bbe23e8fd398b366f26113a",
+                "url": "https://api.github.com/repos/exfriend/overseer-bootstrap/zipball/18ad4fbeb2b1484a8292520713f9f964ce3a6420",
+                "reference": "18ad4fbeb2b1484a8292520713f9f964ce3a6420",
                 "shasum": ""
             },
             "require": {
@@ -219,20 +219,20 @@
                 }
             ],
             "description": "Bootstrap UI for Laravel Overseer",
-            "time": "2016-08-30 22:23:51"
+            "time": "2016-09-05 17:26:15"
         },
         {
             "name": "exfriend/rotator",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/exfriend/rotator.git",
-                "reference": "c75a62e49d141e60437cedf7e23c2af4dbac79f7"
+                "reference": "883bcd7fac7fe2269ca23bcf5f815ea64e2f880d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/exfriend/rotator/zipball/c75a62e49d141e60437cedf7e23c2af4dbac79f7",
-                "reference": "c75a62e49d141e60437cedf7e23c2af4dbac79f7",
+                "url": "https://api.github.com/repos/exfriend/rotator/zipball/883bcd7fac7fe2269ca23bcf5f815ea64e2f880d",
+                "reference": "883bcd7fac7fe2269ca23bcf5f815ea64e2f880d",
                 "shasum": ""
             },
             "type": "library",
@@ -252,7 +252,7 @@
                 }
             ],
             "description": "Proxy Rotator inspired by @paslandau",
-            "time": "2016-08-21 13:55:51"
+            "time": "2016-08-21 14:08:19"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -526,16 +526,16 @@
         },
         {
             "name": "imangazaliev/didom",
-            "version": "1.7.3",
+            "version": "1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Imangazaliev/DiDOM.git",
-                "reference": "ce082dafa513b9866303b595a482d589479e9e3b"
+                "reference": "dd3a3cf40e21bc7bcbf19390573ba05774329eb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Imangazaliev/DiDOM/zipball/ce082dafa513b9866303b595a482d589479e9e3b",
-                "reference": "ce082dafa513b9866303b595a482d589479e9e3b",
+                "url": "https://api.github.com/repos/Imangazaliev/DiDOM/zipball/dd3a3cf40e21bc7bcbf19390573ba05774329eb1",
+                "reference": "dd3a3cf40e21bc7bcbf19390573ba05774329eb1",
                 "shasum": ""
             },
             "require": {
@@ -568,7 +568,7 @@
                 "parser",
                 "xml"
             ],
-            "time": "2016-07-28 19:57:35"
+            "time": "2016-09-02 18:24:36"
         },
         {
             "name": "paragonie/random_compat",
@@ -716,9 +716,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "exfriend/overseer-bootstrap": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -48,6 +48,6 @@ abstract class Robot
 
     public function __call( $name, $args )
     {
-        return call_user_func_array( $this->command, $args );
+        return call_user_func_array( [ $this->command, $name ], $args );
     }
 }

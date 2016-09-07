@@ -2,11 +2,12 @@
 
 namespace Exfriend\Robots\Generators\Robot;
 
-use Illuminate\Console\Command as LaravelCommand;
+use Exfriend\Robots\Generators\BaseCommand;
+use Exfriend\Robots\Generators\Robot\Generator as RobotGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class Command extends LaravelCommand
+class Command extends BaseCommand
 {
     protected $name = 'robots:robot';
     protected $namespace = 'App\\Robots';
@@ -17,7 +18,7 @@ class Command extends LaravelCommand
      */
     private $generator;
 
-    public function __construct( Generator $generator )
+    public function __construct( RobotGenerator $generator )
     {
         $this->generator = $generator;
         parent::__construct();
@@ -26,10 +27,7 @@ class Command extends LaravelCommand
     public function fire()
     {
         $name = strtolower( $this->argument( 'name' ) );
-        if ( !$url = !empty( $this->option( 'url' ) ) ? $this->option( 'url' ) : false )
-        {
-            $url = $this->ask( 'Enter URL:', 'http://' );
-        }
+        $url = $this->askOption( $name, 'Enter base url', 'http://' );
 
         $this->generator->generate( $name, [
             'class' => 'Robot',
@@ -42,7 +40,7 @@ class Command extends LaravelCommand
     protected function getArguments()
     {
         return [
-            [ 'name', InputArgument::REQUIRED, 'The name of the robot, lowercase' ],
+            [ 'name', InputArgument::REQUIRED, 'The name of the robot, lowercase e.g. ebay' ],
         ];
     }
 

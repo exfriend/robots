@@ -5,11 +5,43 @@ namespace {{namespace}};
 class {{class}} extends \Exfriend\Robots\ExtractedItem
 {
   protected $rules = [
-
+     'title' => 'required',
+     'url' => 'max:255',
   ];
 
+  protected $data = [
+     'title' => null,
+     'url' => null,
+  ];
+
+
+ /*
+  * Exports
+  */
+
   public function __toString(){
-      return (string) $this->data;
+      return json_encode($this->data);
   }
+
+ /**
+ * Represent as array
+ */
+ public function toArray(){
+     return $this->data;
+ }
+
+ /**
+ * Transform to Eloquent Model
+ */
+ public function toEloquent(){
+     //return new App\Models\Changeme($this->toArray() );
+ }
+
+ /**
+ * You may want to define some other fields or names for Excel/CSV export
+ */
+ public function toExcel(){
+    return $this->toArray();
+ }
 
 }
