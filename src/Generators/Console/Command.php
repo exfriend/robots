@@ -46,7 +46,14 @@ class Command extends BaseCommand
             'description' => $description,
         ] );
 
+        $this->robot = $robot;
+        $this->cmd_name = $name;
         $this->info( 'Command created successfully.' );
+
+        if ( $this->confirm( 'Register it in Console\Kernel?', 'yes' ) )
+        {
+            $this->addToConsoleKernel( $name );
+        }
     }
 
     protected function getArguments()
@@ -66,4 +73,23 @@ class Command extends BaseCommand
         ];
     }
 
+
+    protected function addToConsoleKernel()
+    {
+        $classpath = '\\App\\Robots\\' . ucfirst( $this->robot ) . '\\' . $this->cmd_name . '::class,';
+        $file = file_get_contents( app_path( 'Console/Kernel.php' ) );
+
+        if ( str_contains( $file, $classpath ) )
+        {
+            return $this->line( 'Command already registered' );
+        }
+
+        $file = preg_replace(
+            '~protected\s*?\$commands\s*?=\s*?\[~ims',
+            'protected $commands= [' . PHP_EOL . "\t\t" . $classpath,
+            $file
+        );
+
+        file_put_contents( app_path( 'Console/Kernel.php' ), $file );
+    }
 }

@@ -16,6 +16,7 @@ abstract class Robot
 
     public function __construct()
     {
+
         $this->engine = ( new Engine() )->setThreads( 100 );
         $this->configure();
     }
@@ -23,6 +24,16 @@ abstract class Robot
     abstract public function configure();
 
     abstract public function handle();
+
+    public function setProgress( $progress )
+    {
+        if ( $this->command )
+        {
+            $this->command->setProgress( $progress );
+        }
+        return true;
+    }
+
 
     public function say( $text )
     {
@@ -49,5 +60,10 @@ abstract class Robot
     public function __call( $name, $args )
     {
         return call_user_func_array( [ $this->command, $name ], $args );
+    }
+
+    public function wait()
+    {
+        sleep( rand( 3, 5 ) );
     }
 }

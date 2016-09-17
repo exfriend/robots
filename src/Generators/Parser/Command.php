@@ -42,7 +42,7 @@ class Command extends BaseCommand
     protected function getArguments()
     {
         return [
-            [ 'name', InputArgument::REQUIRED, 'The name of the Request, e.g. GetProductPageRequest' ],
+            [ 'name', InputArgument::OPTIONAL, 'The name of the Parser, e.g. ProductPageParser', 'Parser' ],
         ];
     }
 

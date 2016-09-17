@@ -50,6 +50,11 @@ class ExtractedItem
         return $this->data[ $field ];
     }
 
+    public function __set( $field, $value )
+    {
+        $this->data[ $field ] = $value;
+    }
+
     public function toArray()
     {
         return $this->data;

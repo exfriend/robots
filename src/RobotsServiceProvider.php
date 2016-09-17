@@ -44,10 +44,10 @@ class RobotsServiceProvider extends ServiceProvider
         {
             return $app[ \Exfriend\Robots\Generators\Parser\Command::class ];
         } );
-        //        $this->app->singleton( 'command.robots.make.scraper', function ( $app )
-        //        {
-        //            return $app[ 'Exfriend\Robots\Commands\MakeScraperCommand' ];
-        //        } );
+        $this->app->singleton( 'command.robots.make.scraper', function ( $app )
+        {
+            return $app[ \Exfriend\Robots\Generators\Scraper\Command::class ];
+        } );
 
 
         $roboKernel = new RoboKernel();
@@ -62,6 +62,8 @@ class RobotsServiceProvider extends ServiceProvider
             } );
         }
 
+        $this->app->singleton( 'robots.default', DefaultRobot::class );
+
         require( __DIR__ . '/helpers.php' );
 
         $this->commands( 'command.robots.make.request' );
@@ -69,6 +71,6 @@ class RobotsServiceProvider extends ServiceProvider
         $this->commands( 'command.robots.make.console' );
         $this->commands( 'command.robots.make.dto' );
         $this->commands( 'command.robots.make.parser' );
-        //        $this->commands( 'command.robots.make.scraper' );
+        $this->commands( 'command.robots.make.scraper' );
     }
 }

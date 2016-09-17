@@ -1,6 +1,11 @@
 <?php
 
-function x($name = 'default')
+function x( $name = 'default' )
 {
-    return app('robots.' . $name);
+    return app( 'robots.' . $name );
+}
+
+function robot( $name = 'default' )
+{
+    return app( 'robots.' . $name );
 }

@@ -30,7 +30,7 @@ class {{class}} extends \Exfriend\Robots\Console\Command
         $this->checkpoint();
         $this->setProgress(0);
 
-        $robot = new {{namespace}}\Robot();
+        $robot = new \{{namespace}}\Robot();
         $robot->setCommand($this);
 
         $robot->handle();

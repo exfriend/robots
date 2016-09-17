@@ -27,7 +27,7 @@ class Command extends BaseCommand
     public function fire()
     {
         $name = strtolower( $this->argument( 'name' ) );
-        $url = $this->askOption( $name, 'Enter base url', 'http://' );
+        $url = $this->askOption( 'url', 'Enter base url', 'http://' );
 
         $this->generator->generate( $name, [
             'class' => 'Robot',
@@ -35,6 +35,11 @@ class Command extends BaseCommand
         ] );
 
         $this->info( 'Robot created successfully.' );
+
+        if ( $this->confirm( 'Register it in Robots\Kernel?', 'yes' ) )
+        {
+            $this->addRobotToKernel( $name );
+        }
     }
 
     protected function getArguments()
@@ -51,4 +56,14 @@ class Command extends BaseCommand
         ];
     }
 
+    protected function addRobotToKernel( $name )
+    {
+        $file = file_get_contents( app_path( 'Robots/Kernel.php' ) );
+        $file = str_replace( 'protected $robots = [',
+            'protected $robots = [' . PHP_EOL . "\t\t" .
+            "'" . strtolower( $name ) . "' => \\App\\Robots\\" . ucfirst( $name ) . "\\Robot::class,",
+            $file );
+
+        file_put_contents( app_path( 'Robots/Kernel.php' ), $file );
+    }
 }
